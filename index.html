@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognizemenot</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+        .desperate {
+            animation: flicker 2s infinite alternate;
+            cursor: pointer;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="synth" src="synth-cry.mp3"></audio>
+    <div class="desperate" onclick="document.getElementById('synth').play();">認識して…？</div>
+    <p style="font-size: 1rem; margin-top: 2rem;">
+        <a href="/about.html" style="color: gray; text-decoration: none;">about</a>
+    </p>
+</body>
+</html>
